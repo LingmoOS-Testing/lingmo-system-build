@@ -22,6 +22,12 @@ update:
 check:
 	@echo -n "Checking the integrity of .po files "
 
+	@if [ ! -d po ]; \
+	then \
+		echo "W: Directory 'po' not found"; \
+		exit 0; \
+	fi
+
 	@if [ -x /usr/bin/msgfmt ]; \
 	then \
 		for POFILE in po/*/*; \
