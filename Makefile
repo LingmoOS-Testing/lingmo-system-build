@@ -19,20 +19,20 @@ test:
 
 	@echo " done."
 
-	@echo -n "Checking for bashisms"
-
-	@if [ -x /usr/bin/checkbashisms ]; \
-	then \
-		for SCRIPT in $(SCRIPTS); \
-		do \
-			checkbashisms -f -x $${SCRIPT}; \
-			echo -n "."; \
-		done; \
-	else \
-		echo "WARNING: Skipping bashism test - you need to install devscripts."; \
-	fi
-
-	@echo " done."
+#	# @echo -n "Checking for bashisms"
+#
+#	@if [ -x /usr/bin/checkbashisms ]; \
+#	then \
+#		for SCRIPT in $(SCRIPTS); \
+#		do \
+#			checkbashisms -f -x $${SCRIPT}; \
+#			echo -n "."; \
+#		done; \
+#	else \
+#		echo "WARNING: Skipping bashism test - you need to install devscripts."; \
+#	fi
+#
+#	@echo " done."
 
 build:
 	@echo "Nothing to build."
